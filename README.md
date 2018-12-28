@@ -2,7 +2,7 @@
 
 Make a component that has the pre-defined shared extension and interoperability of both `prop-types` and TypeScript.
 
-[![Build Status][travis ci badge]][travis ci][![License][license badge]](LICENSE)[![Package Version][npm package version badge]][npm package]
+[![Build Status][travis ci badge]][travis ci][![Test coverage][coveralls badge]][coveralls][![License][license badge]](LICENSE)[![Package Version][npm package version badge]][npm package]
 
 ## Table of Contents
 
@@ -148,6 +148,8 @@ export default class FluidController extends BaseComponent<FluidControllerState>
 
 [travis ci badge]: https://img.shields.io/travis/com/epicinium/basis/develop.svg?style=flat-square
 [travis ci]: https://travis-ci.com/epicinium/basis
+[coveralls badge]: https://img.shields.io/coveralls/github/epicinium/basis.svg?style=flat-square
+[coveralls]: https://coveralls.io/github/epicinium/basis
 [license badge]: https://img.shields.io/github/license/epicinium/basis.svg?style=flat-square
 [npm package version badge]: https://img.shields.io/npm/v/@epicinium/basis.svg?style=flat-square
 [npm package]: https://www.npmjs.com/package/@epicinium/basis

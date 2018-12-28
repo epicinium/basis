@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 
 if [ "$NODE_ENV" != "production" ]; then
-    NODE_ENV=development
+    if $TRAVIS; then
+        NODE_ENV=production
+    else
+        NODE_ENV=development
+    fi
 fi
 
 npx babel sources --out-dir releases --source-maps inline --delete-dir-on-start > /dev/null
