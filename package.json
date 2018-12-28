@@ -1,0 +1,37 @@
+{
+    "name": "@epicinium/basis",
+    "version": "1.0.0-rc.0",
+    "description": "Make a component that has the pre-defined shared extension and interoperability of both `prop-types` and TypeScript.",
+    "keywords": [],
+    "homepage": "https://github.com/epicinium/basis",
+    "bugs": {
+        "url": "https://github.com/epicinium/basis/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Yongbin Min",
+        "email": "contact@cichol.com"
+    },
+    "main": "releases/index.js",
+    "types": "basis.d.ts",
+    "directories": {
+        "lib": "releases",
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/epicinium/basis.git"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {},
+    "peerDependencies": {},
+    "engines": {
+        "node": "^10.15.0 || ^11.0.0",
+        "npm": "^6.5.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    }
+}
