@@ -3,6 +3,6 @@
 npx eslint .
 npx nyc --include releases --silent mocha tests/**/*.jsx --require @babel/register
 
-if $TRAVIS; then
+if ! $TRAVIS; then
     npx nyc report
 fi
