@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
 npx eslint .
+npx mocha tests/**/*.jsx --require @babel/register --reporter list
