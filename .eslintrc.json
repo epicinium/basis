@@ -1,0 +1,89 @@
+{
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "extends": "airbnb",
+    "rules": {
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "indent": [
+            "error",
+            "tab",
+            {
+                "SwitchCase": 0
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "tests/*.jsx"
+                ]
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "ignoreComments": true,
+                "ignoreTrailingComments": true
+            }
+        ],
+        "no-continue": "off",
+        "no-restricted-properties": [
+            "error",
+            {
+                "property": "forEach",
+                "message": "Please use for..of loops instead."
+            }
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "ForInStatement",
+                "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+            },
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            }
+        ],
+        "no-shadow": "off",
+        "no-tabs": "off",
+        "object-curly-newline": [
+            "error",
+            {
+                "consistent": true
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            "tab"
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            "tab"
+        ]
+    }
+}

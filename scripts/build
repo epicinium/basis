@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+if [ "$NODE_ENV" != "production" ]; then
+    NODE_ENV=development
+fi
+
+npx babel sources --out-dir releases --source-maps inline --delete-dir-on-start > /dev/null
+
+if [ "$NODE_ENV" = "production" ]; then
+    PASSES="$(node --print "os.cpus().length")"
+    TERSER="npx terser --toplevel --compress passes=$PASSES --source-map \"content=inline,url=inline\" --mangle --output {} -- {}"
+
+    find releases -type f -name "*.js" -exec sh -c "$TERSER" \;
+    find releases -type f -name "*.js.map" -exec sh -c "rm {}" \;
+fi

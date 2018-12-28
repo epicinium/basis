@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - 'lts/dubnium'
+
+before_install:
+  - npm install --global npm
+
+install:
+  - npm clean-install --no-optional
+
+script:
+  - npm run build
+  - npm test
+
+after_success:
+  - npm run coverage
+
+deploy:
+  provider: npm
+  email: contact@cichol.com
+  api_key:
+    secure: urC4tOaiEu+gSfEuH++2WMJ9g1bU2QFkWWnCHL8H8KyMj+E6zR92o3N95qcrHbBUKwz+Sya7p0TU2dJdDZo0hQz9t26vFS4SOznEwiwlJokfEU7n4X26D8yrluIawYvsBBevSISLw2n3Dz1R7bNyfTZ+jGVN/comgrs17eRbJBiyKJrutUk+Kgnm8NjJpER+UU34fs5pD/dLapiXh5jm7JlhBedz5bmjVFtzXmshyrHx1N7XS+AzbVDeeNQKcW7UvjXWmZj/K1485wMYImK1rqKYBjI41sIpzzSWDwQOgVAcoBoTwCnwi6w9VKLnxLNhcYvzf2CFOf6t03GGGxJ1tDjzvzLq4mvv3xfVDzYe55MW0MowybV3IIBVHb+Nab0u7MiEcBvzwk7b56zkEWBymDTyvQj8KLo8EXRJ/bfi46Xmy6VJGC5LBMlph3XiRZKCQCZUdzC4MD29J97IeefWmZ1mG9vdV3Ro+X8bwJrZvsCwo5CATc7fufW+zxUBSlYVuE34Yo0TVkGjU3FiJfQAAuZAEhOlhYiULf6ts3lnS+PlTmqXlPcdzb0yf5a9dSVIUxb7ga9PKQemocw0nfow2bmCeN/pXLpOhICkpqi9fL32VUL6JIxubadoofmgnJ/bcuyjxoVbbEk0QRq/eq1y0OmngLdstshVI3IEq/pp7uI=
+  on:
+    tags: true
+    repo: epicinium/basis
+    branch: master
+  skip_cleanup: true

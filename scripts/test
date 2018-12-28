@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+npx eslint .
+npx nyc --include releases --silent mocha tests/**/*.jsx --require @babel/register --reporter list
