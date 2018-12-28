@@ -1,6 +1,6 @@
 {
     "name": "@epicinium/basis",
-    "version": "1.0.0-rc.0",
+    "version": "1.0.0-rc.1",
     "description": "Make a component that has the pre-defined shared extension and interoperability of both `prop-types` and TypeScript.",
     "keywords": [],
     "homepage": "https://github.com/epicinium/basis",
